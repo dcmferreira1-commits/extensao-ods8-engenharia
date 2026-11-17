@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Ação Extensionista — Engenharia de Software</title>
+    <title>Portal de Evidências — Projeto Extensionista ODS 8</title>
     <style>
         :root {
-            --primary: #1e3a8a;
-            --secondary: #0d9488;
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --success: #0d9488;
             --bg: #f8fafc;
-            --text: #1e293b;
+            --text: #334155;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,19 +21,19 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, var(--primary), #0f172a);
+            background: var(--primary);
             color: white;
             padding: 2.5rem 1rem;
             text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent);
         }
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 1.75rem;
         }
         header p {
             margin: 0.5rem 0 0;
-            opacity: 0.9;
+            opacity: 0.85;
             font-size: 0.95rem;
         }
         .container {
@@ -40,165 +41,131 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
-        .card {
+        .section-card {
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            padding: 1.5rem;
+            padding: 1.5rem 2rem;
             margin-bottom: 1.5rem;
-            border-top: 4px solid var(--primary);
+            border-left: 5px solid var(--accent);
         }
-        .card h2 {
+        .section-card h2 {
             color: var(--primary);
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
             margin-top: 0;
             font-size: 1.25rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 0.5rem;
         }
         .badge {
             display: inline-block;
-            background-color: #ccfbf1;
-            color: #0f766e;
+            background-color: #dbeafe;
+            color: #1e40af;
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        .metrics-grid {
+        .artifact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
         }
-        .metric-box {
-            background: #f1f5f9;
-            padding: 1rem;
+        .artifact-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 6px;
-            text-align: center;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .metric-box h3 {
-            margin: 0;
-            font-size: 1.5rem;
+        .artifact-box h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.05rem;
             color: var(--primary);
         }
-        .metric-box p {
-            margin: 0.25rem 0 0;
+        .artifact-box p {
+            margin: 0 0 1rem 0;
             font-size: 0.85rem;
             color: #64748b;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        th, td {
-            padding: 0.75rem;
-            border: 1px solid #e2e8f0;
-            text-align: left;
-            font-size: 0.9rem;
-        }
-        th {
-            background-color: #f1f5f9;
-            color: var(--primary);
-        }
-        .btn-access {
+        .btn-artifact {
             display: inline-block;
-            background-color: var(--secondary);
+            background-color: var(--success);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             text-decoration: none;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-top: 1rem;
+            text-align: center;
             transition: background 0.2s;
         }
-        .btn-access:hover {
+        .btn-artifact:hover {
             background-color: #0f766e;
         }
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 2rem;
             font-size: 0.85rem;
             color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Portal de Ação Extensionista — Engenharia de Software</h1>
-        <p>Diego Ferreira (RGM: 35018852) | Cruzeiro do Sul Virtual</p>
+        <h1>Portal de Evidências Práticas — Engenharia de Software</h1>
+        <p>Desenvolvedor: Diego Ferreira (RGM: 35018852) | Cruzeiro do Sul Virtual</p>
     </header>
 
     <div class="container">
         
-        <div class="card">
-            <span class="badge">ODS 8: Trabalho Decente e Crescimento Econômico</span>
-            <h2>Visão Geral do Projeto</h2>
-            <p><strong>Nome do Projeto:</strong> Desenvolvimento de Solução Tecnológica de Apoio à Gestão e Inclusão Digital para Microempreendedores.</p>
-            <p><strong>Objetivo:</strong> Concepção e implantação de artefatos digitais voltados à capacitação de trabalhadores autônomos e pequenos comerciantes, otimizando processos de controle financeiro, presença digital e segurança cibernética.</p>
+        <div class="section-card">
+            <span class="badge">Projeto Vinculado ao ODS 8: Trabalho Decente e Crescimento Econômico</span>
+            <h2>Escopo e Condução Prática do Projeto</h2>
+            <p>Este portal armazena os artefatos tecnológicos reais concebidos, validados e aplicados no âmbito da atividade extensionista. O projeto teve como propósito prático sanar deficiências de digitalização e controle em microempresas e trabalhadores autônomos locais, aplicando metodologias ágeis e princípios de engenharia de software na resolução de problemas reais da comunidade.</p>
         </div>
 
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <h3>5</h3>
-                <p>Microempreendedores Impactados</p>
-            </div>
-            <div class="metric-box">
-                <h3>3</h3>
-                <p>Módulos Tecnológicos Entregues</p>
-            </div>
-            <div class="metric-box">
-                <h3>100%</h3>
-                <p>Validação Concluída</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Artefatos Tecnológicos Desenvolvidos e Validados</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Módulo</th>
-                        <th>Tecnologia / Ferramenta</th>
-                        <th>Finalidade Prática</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Gestão Financeira</strong></td>
-                        <td>Planilha Automatizada (Fluxo de Caixa)</td>
-                        <td>Controle de entradas, saídas e lucro diário para autônomos.</td>
-                        <td>Concluído</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Presença Digital</strong></td>
-                        <td>Guia Prático (Google Perfil & WhatsApp Business)</td>
-                        <td>Otimização da visibilidade comercial em canais digitais.</td>
-                        <td>Concluído</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Segurança Digital</strong></td>
-                        <td>Checklist de Proteção contra Fraudes (Pix)</td>
-                        <td>Orientações de cibersegurança e blindagem de contas.</td>
-                        <td>Concluído</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="section-card">
+            <h2>Repositório de Artefatos Práticos Desenvolvidos</h2>
+            <p style="font-size: 0.9rem; color: #64748b;">Abaixo constam os entregáveis técnicos disponibilizados aos beneficiários durante a execução da atividade:</p>
             
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="#" class="btn-access" target="_blank">🚀 Aplicação Ativa no GitHub Pages</a>
+            <div class="artifact-grid">
+                
+                <div class="artifact-box">
+                    <div>
+                        <h3>📊 Planilha de Gestão Financeira</h3>
+                        <p>Modelo automatizado de fluxo de caixa diário, DRE simplificado e controle de capital de giro para autônomos.</p>
+                    </div>
+                    <a href="https://docs.google.com/spreadsheets" target="_blank" class="btn-artifact">Acessar Artefato Prático</a>
+                </div>
+
+                <div class="artifact-box">
+                    <div>
+                        <h3>📱 Guia de Presença Digital</h3>
+                        <p>Documentação técnica orientando a configuração de perfis comerciais no WhatsApp Business e Google.</p>
+                    </div>
+                    <a href="#" class="btn-artifact" style="background-color: #2563eb;">Visualizar Guia Técnico</a>
+                </div>
+
+                <div class="artifact-box">
+                    <div>
+                        <h3>🔒 Checklist de Segurança Digital</h3>
+                        <p>Protocolos práticos de autenticação em duas etapas e blindagem de transações financeiras contra fraudes.</p>
+                    </div>
+                    <a href="#" class="btn-artifact" style="background-color: #475569;">Ver Protocolo de Segurança</a>
+                </div>
+
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>Repositório Oficial de Evidências — Atividade Extensionista 2026.1</p>
+        <p>Repositório Oficial de Comprovação Acadêmica — Extensão Universitária 2026.1</p>
     </footer>
 
 </body>
