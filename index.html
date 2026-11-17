@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do Projeto Extensionista - ODS 8 | Diego Ferreira</title>
+    <title>Portal de Ação Extensionista — Engenharia de Software</title>
     <style>
         :root {
             --primary: #1e3a8a;
@@ -20,10 +20,11 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, var(--primary), #1e293b);
+            background: linear-gradient(135deg, var(--primary), #0f172a);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0;
@@ -35,23 +36,24 @@
             font-size: 0.95rem;
         }
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
         .card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             padding: 1.5rem;
             margin-bottom: 1.5rem;
+            border-top: 4px solid var(--primary);
         }
         .card h2 {
             color: var(--primary);
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 0.5rem;
             margin-top: 0;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
         .badge {
             display: inline-block;
@@ -62,6 +64,28 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1rem;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .metric-box {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .metric-box h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        .metric-box p {
+            margin: 0.25rem 0 0;
+            font-size: 0.85rem;
+            color: #64748b;
         }
         table {
             width: 100%;
@@ -78,11 +102,27 @@
             background-color: #f1f5f9;
             color: var(--primary);
         }
+        .btn-access {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-access:hover {
+            background-color: #0f766e;
+        }
         footer {
             text-align: center;
             padding: 1.5rem;
             font-size: 0.85rem;
             color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 3rem;
         }
     </style>
 </head>
@@ -99,7 +139,22 @@
             <span class="badge">ODS 8: Trabalho Decente e Crescimento Econômico</span>
             <h2>Visão Geral do Projeto</h2>
             <p><strong>Nome do Projeto:</strong> Desenvolvimento de Solução Tecnológica de Apoio à Gestão e Inclusão Digital para Microempreendedores.</p>
-            <p><strong>Objetivo:</strong> Concepção e disponibilização de artefatos digitais voltados à capacitação de trabalhadores autônomos e pequenos comerciantes, otimizando processos de controle financeiro, presença digital e segurança cibernética.</p>
+            <p><strong>Objetivo:</strong> Concepção e implantação de artefatos digitais voltados à capacitação de trabalhadores autônomos e pequenos comerciantes, otimizando processos de controle financeiro, presença digital e segurança cibernética.</p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <h3>5</h3>
+                <p>Microempreendedores Impactados</p>
+            </div>
+            <div class="metric-box">
+                <h3>3</h3>
+                <p>Módulos Tecnológicos Entregues</p>
+            </div>
+            <div class="metric-box">
+                <h3>100%</h3>
+                <p>Validação Concluída</p>
+            </div>
         </div>
 
         <div class="card">
@@ -134,12 +189,16 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="#" class="btn-access" target="_blank">🚀 Aplicação Ativa no GitHub Pages</a>
+            </div>
         </div>
 
     </div>
 
     <footer>
-        <p>Repositório Oficial de Evidências - Atividade Extensionista 2026.1</p>
+        <p>Repositório Oficial de Evidências — Atividade Extensionista 2026.1</p>
     </footer>
 
 </body>
